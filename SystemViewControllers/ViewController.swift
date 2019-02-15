@@ -138,7 +138,7 @@ class ViewController: UIViewController,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let selectedImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = selectedImage;
-            dismiss(animated: true);   //Dismiss the UIImagePickerController and the UIAlertController.
+            dismiss(animated: true);   //Dismiss the UIImagePickerController.
         }
     }
     
