@@ -48,7 +48,7 @@ class ViewController: UIViewController,
         let activityController: UIActivityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil);
         activityController.popoverPresentationController?.sourceView = sender;
     
-        present(activityController, animated: true);
+        present(activityController, animated: true);   //Present the activityController modally.
         sender.selectedSegmentIndex = -1;
     }
     
@@ -100,7 +100,7 @@ class ViewController: UIViewController,
         alertController.addAction(cancelAction);
         
         alertController.popoverPresentationController?.sourceView = sender;
-        present(alertController, animated: true);
+        present(alertController, animated: true);   //undone by dismiss(animated:)
         sender.selectedSegmentIndex = -1;
     }
     
@@ -156,7 +156,7 @@ class ViewController: UIViewController,
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         let results: [String] = ["cancelled", "sent", "failed"];
         print("result = \(results[result.rawValue])");
-        controller.dismiss(animated: true);
+        dismiss(animated: true);
     }
     
 }
