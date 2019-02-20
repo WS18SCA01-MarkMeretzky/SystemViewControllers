@@ -127,7 +127,7 @@ class ViewController: UIViewController,
         
         let textComposer: MFMessageComposeViewController = MFMessageComposeViewController();
         textComposer.messageComposeDelegate = self;
-        textComposer.recipients = ["4085551212"]
+        textComposer.recipients = ["4085551212"];   //Cupertino, CA
         textComposer.body = "Hello from California!"
         present(textComposer, animated: true);
         sender.selectedSegmentIndex = -1;
