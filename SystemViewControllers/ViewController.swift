@@ -80,10 +80,9 @@ class ViewController: UIViewController,
             alertController.addAction(cameraAction);
         }
 
-        if UIImagePickerController.isSourceTypeAvailable (.photoLibrary) {   //p. 676
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {   //p. 676
             let photoLibraryAction: UIAlertAction = UIAlertAction(title: "Photo Library", style: .default) {(action: UIAlertAction) in
                 imagePicker.sourceType = .photoLibrary;
-                print("type(of: self) = \(type(of: self))");
                 self.present(imagePicker, animated: true);   //self is the ViewController, not the UIAlertController
             }
             alertController.addAction(photoLibraryAction);
